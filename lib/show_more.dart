@@ -7,6 +7,8 @@ class ShowMoreText extends StatefulWidget {
   final String showMoreText;
   final TextStyle style;
   final TextStyle showMoreStyle;
+  final bool shouldShowLessText;
+  final String showLessText;
 
   const ShowMoreText(
     this.text, {
@@ -15,7 +17,12 @@ class ShowMoreText extends StatefulWidget {
     this.showMoreText,
     this.style,
     this.showMoreStyle,
-  }) : super(key: key);
+    this.shouldShowLessText: false,
+    this.showLessText,
+  })  : assert(text != null),
+        assert(maxLength != null),
+        assert(shouldShowLessText != null),
+        super(key: key);
 
   @override
   _ShowMoreTextState createState() => _ShowMoreTextState();
@@ -29,20 +36,42 @@ class _ShowMoreTextState extends State<ShowMoreText> {
   void initState() {
     super.initState();
     tapGestureRecognizer = TapGestureRecognizer()
-      ..onTap = () => setState(() => full = true);
+      ..onTap = () => setState(() => full = !full);
   }
 
   @override
   Widget build(BuildContext context) {
-    if (full || widget.text.length <= widget.maxLength) {
+    if (widget.text.length <= widget.maxLength) {
       return Text(widget.text, style: widget.style);
     }
 
-    var substring = widget.text.substring(0, widget.maxLength);
     var showMoreStyle = widget.showMoreStyle ??
         Theme.of(context).textTheme.body2.copyWith(
               color: Theme.of(context).accentColor,
             );
+
+    if (full) {
+      if (widget.shouldShowLessText) {
+        return Text.rich(
+          TextSpan(
+            style: widget.style,
+            children: [
+              TextSpan(text: widget.text),
+              TextSpan(text: ' '),
+              TextSpan(
+                text: widget.showMoreText ?? 'less',
+                style: showMoreStyle,
+                recognizer: tapGestureRecognizer,
+              ),
+            ],
+          ),
+        );
+      } else {
+        return Text(widget.text, style: widget.style);
+      }
+    }
+
+    var substring = widget.text.substring(0, widget.maxLength);
 
     return Text.rich(
       TextSpan(

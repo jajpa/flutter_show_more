@@ -1,8 +1,8 @@
-# show_more
+# flutter_show_more
 
 Flutter widget for limiting the amount of text to show.
 
-[![pub package](https://img.shields.io/pub/v/show_more.svg?style=popout)](https://pub.dartlang.org/packages/show_more)
+[![pub package](https://img.shields.io/pub/v/flutter_show_more.svg?style=popout)](https://pub.dartlang.org/packages/flutter_show_more)
 
 ## Installation
 
@@ -44,4 +44,4 @@ ShowMoreText(
 <image src="https://i.imgur.com/uAX7jZZ.gif" width="250px"/>
 
 ## License
-[MIT License](https://github.com/joshmatta/show_more/blob/master/LICENSE)
+[MIT License](https://github.com/joshmatta/flutter_show_more/blob/master/LICENSE)

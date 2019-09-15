@@ -18,25 +18,25 @@ dependencies:
 First import show_more.dart
 
 ```dart
-  import 'package:show_more/show_more.dart';
+import 'package:show_more/show_more.dart';
 ```
 
 `ShowMoreText` with all attributes
 
 ```dart
-  ShowMoreText(
-    veryLongText,
-    maxLength: 100,
-    style: TextStyle(fontSize: 12, color: Colors.grey),
-    showMoreText: 'show more',
-    showMoreStyle: TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.bold,
-      color: Theme.of(context).accentColor,
-    ),
-    shouldShowLessText: true,
-    showLessText: 'show less',
+ShowMoreText(
+  veryLongText,
+  maxLength: 100,
+  style: TextStyle(fontSize: 12, color: Colors.grey),
+  showMoreText: 'show more',
+  showMoreStyle: TextStyle(
+  fontSize: 12,
+    fontWeight: FontWeight.bold,
+    color: Theme.of(context).accentColor,
   ),
+  shouldShowLessText: true,
+  showLessText: 'show less',
+),
 ```
 
 ## Screenshots

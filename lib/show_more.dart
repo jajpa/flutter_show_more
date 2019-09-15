@@ -23,25 +23,37 @@ class ShowMoreText extends StatefulWidget {
 
 class _ShowMoreTextState extends State<ShowMoreText> {
   bool full = false;
+  TapGestureRecognizer tapGestureRecognizer;
+
+  @override
+  void initState() {
+    super.initState();
+    tapGestureRecognizer = TapGestureRecognizer()
+      ..onTap = () => setState(() => full = true);
+  }
 
   @override
   Widget build(BuildContext context) {
-    if (full || widget.text.length < widget.maxLength) {
+    if (full || widget.text.length <= widget.maxLength) {
       return Text(widget.text, style: widget.style);
     }
 
+    var substring = widget.text.substring(0, widget.maxLength);
+    var showMoreStyle = widget.showMoreStyle ??
+        Theme.of(context).textTheme.body2.copyWith(
+              color: Theme.of(context).accentColor,
+            );
+
     return Text.rich(
       TextSpan(
+        style: widget.style,
         children: [
-          TextSpan(text: widget.text.substring(0, widget.maxLength)),
-          TextSpan(text: '...'),
+          TextSpan(text: substring),
+          TextSpan(text: '... '),
           TextSpan(
-            text: 'more',
-            style: Theme.of(context).textTheme.body2.copyWith(
-                  color: Theme.of(context).accentColor,
-                ),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () => setState(() => full = true),
+            text: widget.showMoreText ?? 'more',
+            style: showMoreStyle,
+            recognizer: tapGestureRecognizer,
           ),
         ],
       ),

@@ -41,7 +41,7 @@ ShowMoreText(
 
 ## Screenshots
 
-<image src="https://i.imgur.com/nESIsy8.gif" width="250px"/>
+<image src="https://i.imgur.com/uAX7jZZ.gif" width="250px"/>
 
 ## License
 [MIT License](https://github.com/joshmatta/show_more/blob/master/LICENSE)

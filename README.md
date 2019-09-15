@@ -1,14 +1,47 @@
-# show_more
+# rating_bar
 
 Flutter widget for limiting the amount of text to show.
 
-## Getting Started
+[![pub package](https://img.shields.io/pub/v/show_more.svg?style=popout)](https://pub.dartlang.org/packages/show_more)
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## Installation
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Add this to your package's pubspec.yaml file
+
+```yaml
+dependencies:
+  ...
+  show_more: ^latest.version.here
+```
+
+## Usage
+First import show_more.dart
+
+```dart
+  import 'package:show_more/show_more.dart';
+```
+
+`ShowMoreText` with all attributes
+
+```dart
+  ShowMoreText(
+    veryLongText,
+    maxLength: 100,
+    style: TextStyle(fontSize: 12, color: Colors.grey),
+    showMoreText: 'show more',
+    showMoreStyle: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.bold,
+      color: Theme.of(context).accentColor,
+    ),
+    shouldShowLessText: true,
+    showLessText: 'show less',
+  ),
+```
+
+## Screenshots
+
+<image src="https://i.imgur.com/nESIsy8.gif" width="250px"/>
+
+## License
+[MIT License](https://github.com/joshmatta/show_more/blob/master/LICENSE)

@@ -1,4 +1,4 @@
-name: show_more
+name: flutter_show_more
 description: Flutter widget for limiting the amount of text to show.
 version: 0.1.0
 author: Joshua Matta<joshuamatta1996@gmail.com>

@@ -11,14 +11,14 @@ Add this to your package's pubspec.yaml file
 ```yaml
 dependencies:
   ...
-  show_more: ^latest.version.here
+  flutter_show_more: ^latest.version.here
 ```
 
 ## Usage
 First import show_more.dart
 
 ```dart
-import 'package:show_more/show_more.dart';
+import 'package:flutter_show_more/flutter_show_more.dart';
 ```
 
 `ShowMoreText` with all attributes

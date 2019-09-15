@@ -51,15 +51,25 @@ class _MyHomePageState extends State<MyHomePage>
           DataCard(
             title: 'Long Text With Animation',
             child: AnimatedSize(
-              child: ShowMoreText(veryLongText),
+              child: ShowMoreText(
+                veryLongText,
+                shouldShowLessText: true,
+              ),
               duration: Duration(milliseconds: 300),
               vsync: this,
               alignment: Alignment.topCenter,
             ),
           ),
           DataCard(
+            title: 'Long Text With Show Less',
+            child: ShowMoreText(
+              veryLongText,
+              shouldShowLessText: true,
+            ),
+          ),
+          DataCard(
             title: 'Short Text',
-            child: ShowMoreText(veryLongText.substring(0,90)),
+            child: ShowMoreText(veryLongText.substring(0, 90)),
           ),
         ],
       ),

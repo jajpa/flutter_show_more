@@ -1,4 +1,4 @@
-# rating_bar
+# show_more
 
 Flutter widget for limiting the amount of text to show.
 

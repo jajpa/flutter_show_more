@@ -59,7 +59,7 @@ class _ShowMoreTextState extends State<ShowMoreText> {
               TextSpan(text: widget.text),
               TextSpan(text: ' '),
               TextSpan(
-                text: widget.showMoreText ?? 'less',
+                text: widget.showLessText ?? 'less',
                 style: showMoreStyle,
                 recognizer: tapGestureRecognizer,
               ),

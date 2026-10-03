@@ -1,47 +1,54 @@
 # flutter_show_more
 
-Flutter widget for limiting the amount of text to show.
+A modern Flutter widget for limiting the amount of text to show, with "show more" and "show less" functionality. Fully compatible with Dart 3, Flutter 3, and strict null safety.
 
-[![pub package](https://img.shields.io/pub/v/flutter_show_more.svg?style=popout)](https://pub.dartlang.org/packages/flutter_show_more)
+[![pub package](https://img.shields.io/pub/v/flutter_show_more.svg?style=popout)](https://pub.dev/packages/flutter_show_more)
+
+## Features
+
+* Limits text visibility up to a specific character length, using grapheme-aware (`characters` API) truncation so emojis aren't split.
+* Optionally handles "show less" logic.
+* Fully customizable styles for text and toggles.
 
 ## Installation
 
-Add this to your package's pubspec.yaml file
+Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  ...
-  flutter_show_more: ^latest.version.here
+  flutter_show_more: ^1.0.0
 ```
 
 ## Usage
-First import show_more.dart
+
+First, import `flutter_show_more`:
 
 ```dart
 import 'package:flutter_show_more/flutter_show_more.dart';
 ```
 
-`ShowMoreText` with all attributes
+Then, use `ShowMoreText`:
 
 ```dart
 ShowMoreText(
-  veryLongText,
+  'A very long text string that you want to truncate and allow the user to expand or collapse.',
   maxLength: 100,
-  style: TextStyle(fontSize: 12, color: Colors.grey),
+  style: const TextStyle(fontSize: 14, color: Colors.black87),
   showMoreText: 'show more',
   showMoreStyle: TextStyle(
-  fontSize: 12,
+    fontSize: 14,
     fontWeight: FontWeight.bold,
-    color: Theme.of(context).accentColor,
+    color: Theme.of(context).colorScheme.primary,
   ),
   shouldShowLessText: true,
   showLessText: 'show less',
-),
+)
 ```
 
 ## Screenshots
 
-<image src="https://i.imgur.com/uAX7jZZ.gif" width="250px"/>
+<img src="screenshot.png" alt="flutter_show_more example" width="600px"/>
 
 ## License
-[MIT License](https://github.com/joshmatta/flutter_show_more/blob/master/LICENSE)
+
+[MIT License](LICENSE)

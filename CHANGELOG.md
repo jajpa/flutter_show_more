@@ -1,3 +1,7 @@
+## 1.0.1
+
+* Fix screenshot URLs in README to load properly on pub.dev.
+
 ## [1.0.0] - 2024-10-03
 
 * Migrated to Dart 3 and Flutter 3 with strict null safety.

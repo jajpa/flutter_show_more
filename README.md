@@ -47,7 +47,7 @@ ShowMoreText(
 
 ## Screenshots
 
-<img src="screenshot.png" alt="flutter_show_more example" width="600px"/>
+<img src="https://raw.githubusercontent.com/jajpa/flutter_show_more/master/screenshot.png" alt="flutter_show_more example" width="600px"/>
 
 ## License
 

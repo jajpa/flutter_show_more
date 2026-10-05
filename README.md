@@ -16,7 +16,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flutter_show_more: ^1.0.0
+  flutter_show_more: ^1.0.2
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ ShowMoreText(
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/jajpa/flutter_show_more/master/screenshot.png" alt="flutter_show_more example" width="600px"/>
+![flutter_show_more example](https://raw.githubusercontent.com/jajpa/flutter_show_more/master/show_more.gif)
 
 ## License
 
